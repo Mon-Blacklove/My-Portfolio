@@ -103,39 +103,46 @@ certifications: {
     ],
   },
 
-  // ผลงานจริงที่พัฒนา
+// ผลงานจริงที่พัฒนา
   projects: [
     {
       id: 1,
+      title: "Sport Store — E-Commerce Web Application",
+      role: "Full-Stack Developer",
+      year: "2026",
+      problem:
+        "ระบบร้านค้าออนไลน์ทั่วไปขาดการแยกระบบสถาปัตยกรรมระหว่างบ้านหน้า (Frontend) และระบบหลังบ้าน (Backend API) ทำให้การจัดการข้อมูลสินค้าและระบบตะกร้าซับซ้อน",
+      solution:
+        "พัฒนาระบบเว็บไซต์อีคอมเมิร์ซสำหรับจำหน่ายสินค้าและอุปกรณ์กีฬาแบบแยกส่วน (Separated Frontend & Backend) รองรับการเลือกชมสินค้า, ค้นหาตามหมวดหมู่, โปรโมชัน, รายละเอียดสินค้า และระบบตะกร้าสินค้า",
+      tech: ["Next.js", "Fastify", "Supabase", "TypeScript", "Tailwind CSS"],
+      highlights: [
+        "พัฒนาฝั่ง Frontend ด้วย Next.js เน้นประสิทธิภาพสูงและการทำ SEO-friendly",
+        "พัฒนาฝั่ง Backend API ด้วย Fastify สำหรับจัดการข้อมูลสินค้า หมวดหมู่ ผู้ใช้ ตะกร้า และโปรโมชัน",
+        "เชื่อมต่อฐานข้อมูลและจัดการหลังบ้านด้วย Supabase Database อย่างมีประสิทธิภาพ",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      liveDemo: "https://my-portfolio-mu-five-98.vercel.app",
+      github: "https://github.com/Mon-Blacklove/Project-204",
+    },
+    {
+      id: 2,
       title: "Smart Campus Dashboard & Resource Booking",
-      category: "Full-Stack Web App",
+      role: "Full-Stack Developer",
       year: "2026",
       problem:
         "ระบบจองห้องและอุปกรณ์เดิมต้องกรอกเอกสาร ทำให้ข้อมูลตกหล่นและอัปเดตล่าช้า",
       solution:
         "พัฒนาเว็บแอปพลิเคชันจัดการการจองแบบเรียลไทม์ พร้อมแดชบอร์ดตรวจสอบสถานะและยืนยันผ่าน QR Code",
-      role: "ออกแบบ Responsive UX/UI, พัฒนา Frontend ด้วย React และเชื่อมต่อ RESTful API",
       tech: ["React", "Tailwind CSS", "JavaScript", "RESTful APIs"],
+      highlights: [
+        "ออกแบบ Responsive UX/UI ให้ใช้งานง่ายผ่านทุกอุปกรณ์",
+        "พัฒนา Frontend ด้วย React และเชื่อมต่อระบบ RESTful API",
+      ],
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
       liveDemo: "#",
-      github: "https://github.com",
-    },
-    {
-      id: 2,
-      title: "Aura Roast - Online Specialty Coffee Store",
-      category: "E-Commerce System",
-      year: "2026",
-      problem:
-        "ระบบสต็อกและการชำระเงินของร้านค้าแบบเดิมไม่มีการตัดยอดอัตโนมัติและจัดการคำสั่งซื้อได้ยาก",
-      solution:
-        "ออกแบบและสร้างระบบจำหน่ายอุปกรณ์กาแฟ มีระบบตะกร้าสินค้า แค็ตตาล็อก และการยืนยันคำสั่งซื้อ",
-      role: "ออกแบบ UI/UX หน้าร้าน พัฒนา Frontend และทดสอบระบบการเชื่อมต่อข้อมูล",
-      tech: ["React", "Node.js", "SQL Server", "Tailwind CSS"],
-      image:
-        "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
-      liveDemo: "#",
-      github: "https://github.com",
+      github: "https://github.com/Mon-Blacklove",
     },
   ],
 };
