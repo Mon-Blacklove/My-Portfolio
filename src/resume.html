@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nanthamon Supo - Resume</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #334155;
+    background: #f1f5f9;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* จำลองขนาดหน้ากระดาษ A4 */
+  .a4-page {
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff;
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* คอลัมน์ด้านซ้าย (แถบสีฟ้าอ่อน) */
+  .sidebar {
+    width: 72mm;
+    background-color: #f0f6fa;
+    padding: 22mm 10mm 15mm 12mm;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-right: 1px solid #e2e8f0;
+  }
+
+  /* รูปภาพโปรไฟล์ */
+  .profile-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .profile-img {
+    width: 38mm;
+    height: 48mm;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  /* หัวข้อคอลัมน์ซ้าย */
+  .side-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: #1e3a8a;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #bfdbfe;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+
+  /* รายละเอียดการติดต่อ */
+  .contact-list {
+    font-size: 11px;
+    line-height: 1.6;
+    color: #475569;
+  }
+  .contact-item {
+    margin-bottom: 7px;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    word-break: break-all;
+  }
+
+  /* ประวัติการศึกษาในแถบซ้าย */
+  .edu-item {
+    margin-bottom: 12px;
+  }
+  .edu-degree {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+  }
+  .edu-school {
+    font-size: 11px;
+    color: #475569;
+    margin-top: 2px;
+  }
+  .edu-meta {
+    font-size: 10.5px;
+    color: #64748b;
+    margin-top: 2px;
+  }
+  .edu-gpax {
+    font-size: 11px;
+    color: #1e3a8a;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+
+  /* คอลัมน์ด้านขวา (เนื้อหาหลัก) */
+  .main-content {
+    flex: 1;
+    padding: 22mm 16mm 15mm 14mm;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Header ชื่อ & ตำแหน่ง */
+  .name {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin: 0;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .headline {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2563eb;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+  .summary {
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: #475569;
+    text-align: justify;
+  }
+
+  /* หัวข้อหลักคอลัมน์ขวา */
+  .section-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: #1e3a8a;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #bfdbfe;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  /* โครงการผลงาน */
+  .project-item {
+    margin-bottom: 10px;
+  }
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .project-name {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .project-year {
+    font-size: 11px;
+    font-style: italic;
+    color: #64748b;
+  }
+  ul {
+    margin: 4px 0 0 16px;
+    padding: 0;
+  }
+  li {
+    font-size: 11px;
+    line-height: 1.5;
+    color: #475569;
+    margin-bottom: 3px;
+  }
+
+  /* ทักษะ */
+  .skill-group {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 4px;
+  }
+  .skill-group strong {
+    color: #0f172a;
+  }
+
+  @media print {
+    body {
+      background: none;
+    }
+    .a4-page {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="a4-page">
+  <!-- คอลัมน์ด้านซ้าย -->
+  <aside class="sidebar">
+    <!-- กรอบรูปโปรไฟล์ -->
+    <div class="profile-container">
+      <img 
+        src="./public/profile.jpg" 
+        alt="Profile" 
+        class="profile-img"
+        onerror="if(this.src.indexOf('public') !== -1){ this.src='profile.jpg'; }"
+      />
+    </div>
+
+<!-- Contact -->
+    <div>
+      <div class="side-title">Contact</div>
+      <div class="contact-list">
+        <div class="contact-item">📍 Bangkok, Thailand</div>
+        <div class="contact-item">📞 098-993-3672</div>
+        <div class="contact-item">✉️ Nanthamon.sup@spumail.net</div>
+        <div class="contact-item">💻 <a href="https://github.com/Mon-Blacklove" target="_blank" style="color: inherit; text-decoration: none;">github.com/Mon-Blacklove</a></div>
+        <div class="contact-item">🔗 <a href="https://www.linkedin.com/in/nanthamon-supo-695319421/" target="_blank" style="color: inherit; text-decoration: none;">linkedin.com/in/nanthamon-supo</a></div>
+      </div>
+    </div>
+    
+    <!-- Education (ม.ปลาย ขึ้นก่อน มหาวิทยาลัย)[cite: 1] -->
+    <div>
+      <div class="side-title">Education</div>
+      
+      <div class="edu-item">
+        <div class="edu-degree">Arts-Language Program</div>
+        <div class="edu-school">Saohai Wimonwittayanukul School</div>
+        <div class="edu-meta">Graduated: 2023</div>
+        <div class="edu-gpax">GPAX: 2.86 / 4.00</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">Computer Science, Faculty of Information Technology</div>
+        <div class="edu-school">Sripatum University</div>
+        <div class="edu-meta">Expected Graduation: 2027</div>
+        <div class="edu-gpax">GPAX: 2.56 / 4.00</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- คอลัมน์ด้านขวา -->
+  <main class="main-content">
+    <!-- Header -->
+    <header>
+      <h1 class="name">Nanthamon Supo</h1>
+      <div class="headline">Frontend & UI/UX Developer</div>
+      <div class="summary">
+        An enthusiastic Computer Science student focused on Frontend Development and UI/UX Design with a solid foundation in HTML, CSS, JavaScript, and React. Passionate about building modern, responsive web applications with intuitive interfaces, and continuously refining full-stack integration skills through hands-on academic projects.
+      </div>
+    </header>
+
+    <!-- Key Projects -->
+    <section>
+      <div class="section-title">Key Projects</div>
+      
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Smart Campus Dashboard & Resource Booking</span>
+          <span class="project-year">2026</span>
+        </div>
+        <ul>
+          <li>Designed clean, user-friendly UI/UX and developed responsive components using React and Tailwind CSS.</li>
+          <li>Integrated RESTful APIs to enable real-time room reservations and instant verification.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Aura Roast - Online Specialty Coffee Store</span>
+          <span class="project-year">2026</span>
+        </div>
+        <ul>
+          <li>Engineered modern e-commerce user interface including shopping cart, product catalog, and checkout flow.</li>
+          <li>Handled UI state management and tested seamless API communication with backend services.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certifications (Microsoft Learn) -->
+    <section>
+      <div class="section-title">Certifications</div>
+      <ul>
+        <li><strong>Build & Deploy a Microsoft Teams App using Teams Toolkit</strong> — Microsoft Learn</li>
+        <li><strong>Retrieve Microsoft 365 Data for Teams Apps using Microsoft Graph</strong> — Microsoft Learn</li>
+        <li><strong>Connect Web Services to Microsoft Teams using Webhooks</strong> — Microsoft Learn</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <div class="section-title">Skills</div>
+      <div class="skill-group">
+        <strong>Languages:</strong> HTML, CSS, JavaScript (ES6+), Python, SQL
+      </div>
+      <div class="skill-group">
+        <strong>Frameworks & Libraries:</strong> React.js, Tailwind CSS, Node.js
+      </div>
+      <div class="skill-group">
+        <strong>Databases & Tools:</strong> SQL Server, RESTful APIs, Git, GitHub, VS Code, Postman
+      </div>
+      <div class="skill-group">
+        <strong>Soft Skills:</strong> Team Collaboration, Problem Solving, Continuous Learning & Adaptability
+      </div>
+    </section>
+  </main>
+</div>
+
+</body>
+</html>
