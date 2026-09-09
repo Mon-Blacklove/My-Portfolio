@@ -419,16 +419,6 @@ export default function App() {
                   </div>
 
                   <div className="mt-6 pt-5 border-t border-slate-100 flex gap-5 items-center">
-                    {proj.liveDemo !== "#" && (
-                      <a
-                        href={proj.liveDemo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-xs font-semibold text-blue-600 hover:text-blue-700 flex items-center gap-1"
-                      >
-                        <ExternalLink className="w-4 h-4" /> Live Demo
-                      </a>
-                    )}
                     <a
                       href={proj.github}
                       target="_blank"

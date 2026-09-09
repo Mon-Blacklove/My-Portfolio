@@ -120,8 +120,7 @@ certifications: {
         "พัฒนาฝั่ง Backend API ด้วย Fastify สำหรับจัดการข้อมูลสินค้า หมวดหมู่ ผู้ใช้ ตะกร้า และโปรโมชัน",
         "เชื่อมต่อฐานข้อมูลและจัดการหลังบ้านด้วย Supabase Database อย่างมีประสิทธิภาพ",
       ],
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      image:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
       github: "https://github.com/Mon-Blacklove/Project-204",
     },
     {
@@ -138,10 +137,8 @@ certifications: {
         "ออกแบบ Responsive UX/UI ให้ใช้งานง่ายผ่านทุกอุปกรณ์",
         "พัฒนา Frontend ด้วย React และเชื่อมต่อระบบ RESTful API",
       ],
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      liveDemo: "#",
-      github: "https://github.com/Mon-Blacklove",
+      image:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      github:"https://github.com/Mon-Blacklove",
     },
   ],
 };
