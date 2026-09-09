@@ -122,7 +122,6 @@ certifications: {
       ],
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-      liveDemo: "https://my-portfolio-mu-five-98.vercel.app",
       github: "https://github.com/Mon-Blacklove/Project-204",
     },
     {
